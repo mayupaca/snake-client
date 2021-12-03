@@ -1,5 +1,4 @@
 let connection;
-
 const setupInput = function (conn) {
   connection = conn;
   const stdin = process.stdin;
@@ -9,7 +8,6 @@ const setupInput = function (conn) {
   stdin.on("data", handleUserInput);
   return stdin;
 };
-
 const handleUserInput = function (key) {
   if (key === "\u0003") {
     process.exit();
